@@ -1,0 +1,5 @@
+d=dict()                               #empty dictionary
+num = int(input("enter a number"))     #getting a number input from user and changing it in a integer
+for i in range(1,num+1):               #for loop ranging from 1 to to input number 
+    d[i]=i**2                          #squaring each number till user input and storing in d
+print(d)                               #printing d dictionary
