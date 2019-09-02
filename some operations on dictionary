@@ -1,0 +1,11 @@
+colors = {'col1':'Red','col2':'Blue','col3':'Yellow'}          #dictionary created of name colors
+colors['col4']='Green'                                         #a new key is added of name col4
+colors['col2']='Orange'                                        #value of key col2 is changed to Orange
+print(colors)                                                  
+colors_new=colors.fromkeys(('col1','col2'))                    #two keys col1 and col2 is taken from colors dict and new dict is formed
+print(colors_new)
+print(colors.values())                                         #values of colors dict is printed
+print(colors_new.values())
+colors.clear()                                                 #it clears the whole dict and empty dict is left
+print(colors)
+print(colors_new['col2'])                                      #value of key col2 is printed
