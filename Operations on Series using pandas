@@ -1,0 +1,28 @@
+#pandas series
+import pandas as pd
+s = pd.Series([1,2,3,4,5])
+print(s)
+
+#series to list conversion
+s = pd.Series([1,2,3,4,5])
+a=s.tolist()
+print(a)
+
+#addition,subtraction,multiplication and division
+a = pd.Series([1,2,3,4,5])
+b = pd.Series([5,4,3,2,1])
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+
+#comparing elements of two series
+a = pd.Series([1,2,3,4,5])
+b = pd.Series([5,4,3,2,1])
+print('elements are equal or not',a == b)
+print('elements of a are greater than b or not',a>b)
+print('elements of a are smaller than b or not',a<b)
+
+#converting dictionary into series
+d={'a': 100, 'b': 200, 'c': 300, 'd': 400, 'e': 800}
+print(pd.Series(d))
