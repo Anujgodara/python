@@ -1,0 +1,19 @@
+name = input("Enter file:")
+handle = open(name)
+data = dict()
+for line in handle:
+    if line.startswith('From '):
+        words = line.split()
+        mail = words[1]
+        if mail in data:
+            data[mail]+=1
+        else:
+            data[mail]=1
+maximum = 0
+theword = None
+for k,v in data.items():
+    if v>maximum:
+        maximum = v
+        theword = k
+        
+print(theword,maximum)
