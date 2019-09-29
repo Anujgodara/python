@@ -1,0 +1,20 @@
+name = input("Enter file:")
+handle = open(name)
+lst = list()
+data = dict()
+for line in handle:
+    if line.startswith('From '):
+        words = line.split()
+        date = words[5]
+        d = date.split(':')
+        hour = d[0]
+        if hour in data:
+            data[hour]+=1
+        else:
+            data[hour]=1
+for k,v in data.items():
+    newt = (k,v)
+    lst.append(newt)
+    lst = sorted(lst)
+for k,v in lst:
+    print(k,v)
