@@ -1,0 +1,9 @@
+import urllib
+from bs4 import BeautifulSoup
+url = input("enter a url:")
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html,'html.parser')
+tags = soup('a')
+for tag in tags:
+    tag = tag.get('href',None)
+    print(tag)
