@@ -1,0 +1,9 @@
+import re
+x = open('sample.txt','r')
+sum = 0
+for line in x:
+    y = re.findall('[0-9]+',line)
+    for num in y:
+        num = int(num)
+        sum = sum + num
+print(sum)
